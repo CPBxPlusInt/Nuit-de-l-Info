@@ -27,7 +27,7 @@ STATICFILES_DIRS = [
 SECRET_KEY = 'vruguwu8^43xwc2tp0)gs%tawwx-))l9s#mr0r5t5c&dm!c5(0'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['CPBxPlusInt.ddns.net','78.212.0.124','localhost']
 
