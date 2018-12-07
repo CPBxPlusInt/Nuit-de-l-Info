@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+
+<link rel="stylesheet" type="text/css" href="test-hugo.css">
+  <meta charset="utf-8">
+  <title>bde</title>
+
+  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+</head>
+
+<body>
+
+<div class="main-image">
+<img id="oiseau" src="assets/Sprite_Chouette_fini_fini.png"></img>
+<img id="tree" src="assets/tree_1_fini.png"></img>
+<img id="tree2" src="assets/tree_2_fini.png"></img>
+</div>
+
+
+
+<script>
+
+$( "div" ).mousemove(function( event ) {
+
+  var mouseX = event.pageX;
+  var mouseY = event.pageY;
+
+  var oiso = document.getElementById("oiseau");
+
+  oiso.style.top = mouseY + 'px';
+
+
+var tree = document.getElementById("tree");
+
+tree.style.right = X +'px';
+tree.style.top = Y + 'px';
+
+
+var tree2 = document.getElementById("tree2");
+
+tree2.style.right = mouseX +'px';
+tree2.style.top = mouseY + 'px';
+
+
+});
+
+
+
+</script>
+ 
+</body>
+</html>
+
+
+
+
