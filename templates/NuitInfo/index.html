@@ -1,0 +1,63 @@
+{% load staticfiles %}
+<html>
+
+<head>
+	<title>BDE CPBx</title><!-- Un titre tout à fait original vous en conviendrez...-->
+	<link href="{% static 'css/base.css' %}" type="text/css" rel="stylesheet"/>
+	<script src="{% static 'bot/brython.js' %}"></script>
+</head>
+
+<body onload="brython()">
+	<img id="redbull" src="{% static 'images/redbull.jpg' %}"/>
+	<h1 id="banner"><a id ="accueil" href="{% url 'index' %}">BDE CPBx</a></h1>
+	<div id="center">
+		<h1>Les News</h1>
+		
+		{% for event in events%}
+			<div class="event" align="center">
+				<h2>{{event.title}}</h2><small>{{event.date}} {{event.heure}}</small>
+				<p class="description">
+					{{event.description}}
+				</p>
+				<small>Lieu: <a class="map" href="{{event.map}}">{{event.lieu}}</a></small>
+			</div>
+		{% endfor %}
+	</div>
+	
+	<div id="left">
+		<a href="{% url 'bde' %}" >Le BDE</a>
+		<a href="{% url 'cpbx' %}" >"CPBx c'est quoi ?"</a>
+		<a href="{% url 'detente' %}">Espace Détente</a>
+		<a href="{% url 'liens' %}">Liens Utiles</a>
+		<a href="{% url 'noteNulle' %}">LE CALCULATEUR DE NOTES</a>
+		
+		<div align="center"><img id="avatar" src="{% static 'images/avatar.png' %}"/></div>
+		
+		<textarea id="chatbox" readonly>
+Veuillez coder un bot ici s'il vous plaît.
+		</textarea>
+		<input id="chatbar" type="text" placeholder="Ton message"/>
+		<input id="send" type="submit" value="Envoyer"/>
+		
+		<script type="text/python">
+			from browser import document
+			
+			def change(event):
+				message = document["chatbar"].textContent
+				content = document["chatbox"].textContent + '\n\n' + message
+				document["chatbox"].textContent = content
+			document["send"].bind("click", change)
+			
+			#Bon, j'avoue ça marche pas, mais j'aurai essayé...
+		</script>
+	</div>
+	
+	<a id="cv" href="{% static 'docs/denis.pdf' %}">Par ici !</a>
+</body>
+
+<!--
+Cette nuit, c'était bien. Mais c'était dur. Plus dur qu'un DST de maths fonda. Bon, peut-être pas en fait.
+Mais vous avez l'idée...
+-->
+
+</html>

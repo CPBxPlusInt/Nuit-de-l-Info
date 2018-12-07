@@ -1,0 +1,176 @@
+@font-face
+{
+	font-family: Gill Sans MT
+	src: url('{% static "fonts/gill.TTF" %}')
+}
+#accueil
+{
+	border: none;
+	color: white;
+	margin-top: 0;
+}
+body
+{
+	font-family: Gill Sans MT;
+	background-color: #efefef;
+}
+#center
+{
+	text-align: center;
+	margin-top: 110;
+	margin-left: 20%;
+}
+#center h1
+{
+	text-decoration: underline;
+	margin-bottom: 45;
+	background-color: white;
+	width: 100%;
+	padding: 15;
+}
+#content
+{
+	padding-left: 20%;
+	padding-right: 20%;
+	background-color: white;
+	padding-bottom: 20;
+	padding-top: 20;
+}
+.lien
+{
+	border: none;
+	color: red;
+	margin: 20;
+}
+form input
+{
+	margin-right: 20;
+}
+.event
+{
+	background-color: white;
+	text-align: center;
+	padding: 20;
+}
+h2
+{
+	display: inline;
+	text-decoration: underline;
+	margin-right: 2%;
+}
+.map
+{
+	border: none;
+	display: inline;
+	margin: 0;
+	color: red;
+}
+#news
+{
+	font-size: 20;
+	text-align: left;
+	margin-left: 1%;
+	background-color: white;
+	width: 100%;
+	position: relative;
+	left: -20;
+	padding-left: 20;
+}
+#left
+{
+	position: fixed;
+	left: 0;
+	background-color: #1f1f1f;
+	width: 20%;
+	top: 0;
+	height: 100%;
+	z-index: 2;
+}
+a{
+	text-decoration: none;
+	color: white;
+	display: block;
+	margin: 20;
+	margin-bottom: 0;
+	border-top: 2px solid #393939;
+	padding-top: 20;
+	text-align: center;
+}
+a:hover{
+	color: #e77b1a;
+}
+#banner
+{
+	/*Je vous jure, cette bande jaune elle me fait chier !*/
+	background-color: #e77b1a;
+	text-align: center;
+	color: white;
+	top:0;
+	padding: 15;
+	position: fixed;
+	text-align: center;
+	width: 100%;
+	z-index: 1;
+	left: 10%;
+	
+}
+#chatbox
+{
+	background-color: #efefef;	
+	margin: 10;
+	margin-top: 0;
+	height: 36%;
+	padding: 10;
+	padding-top: 1;
+	font-size: 14;
+	width: 95%;
+}
+#chatbox:active
+{
+	border: none;
+}
+#chatbar
+{
+	height: 25;
+	width: 95%;
+	margin-left: 10;
+	margin-right: 10;
+	padding-left: 10;
+}
+#avatar
+{
+	width: 75px;
+	margin-top: 15;
+	margin-bottom: 0;
+}
+#send
+{
+	width: 95%;
+	margin-left: 10;
+}
+#redbull
+{
+	position: fixed;
+	right: 0;
+	top: 0;
+	width: 50;
+	z-index: 3;
+	opacity: 0;
+}
+#redbull:hover
+{
+	opacity: 100;
+	width: 50%;
+}
+#cv
+{
+	border: none;
+	color: #efefef;
+	position: fixed;
+	bottom: 0;
+	right: 0;
+}
+#cv:hover
+{
+	color: black;
+}
